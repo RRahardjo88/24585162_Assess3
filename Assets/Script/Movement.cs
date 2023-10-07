@@ -6,7 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Movement : MonoBehaviour
 {
-    public float kecepatan = 8f;
+    public float speed = 8f;
     public float speedMultiplier = 1f;
     public Vector2 initialDirection;
     public LayerMask obstacleLayer;
@@ -44,7 +44,7 @@ public class Movement : MonoBehaviour
     private void FixedUpdate () 
     {
         Vector2 position = rigidbody.position;
-        Vector2 translation = direction * kecepatan * speedMultiplier * Time.fixedDeltaTime;
+        Vector2 translation = direction * speed * speedMultiplier * Time.fixedDeltaTime;
         rigidbody.MovePosition(position + translation);    
     }
     public void SetDirection (Vector2 direction, bool forced = false) 

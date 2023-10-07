@@ -57,13 +57,13 @@ public class HantuFrightened : HantuBehavior
         {
             blue.enabled = false;
             white.enabled = true;
-            white.GetComponent<AnimasiSprite>().Restart();
+            white.GetComponent<SpriteAnimation>().Restart();
         }
     }
 
     private void OnEnable()
     {
-        blue.GetComponent<AnimasiSprite>().Restart();
+        blue.GetComponent<SpriteAnimation>().Restart();
         hantus.movement.speedMultiplier = 0.5f;
         makan = false;
     }

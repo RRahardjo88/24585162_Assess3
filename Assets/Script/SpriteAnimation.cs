@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class AnimasiSprite : MonoBehaviour
+public class SpriteAnimation : MonoBehaviour
 
 {
     public SpriteRenderer spriteRenderer { get; private set;}

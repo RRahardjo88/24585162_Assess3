@@ -8,6 +8,8 @@ public class TweenPacStudent : MonoBehaviour
     private Vector3 targetPosition;
     private float tweenDuration = 1.0f;
     private WaitForSeconds wait;
+    private float targetRotationAngle = 0.0f;
+    
     void Start()
     {
         startPosition = transform.position;
@@ -23,19 +25,19 @@ public class TweenPacStudent : MonoBehaviour
         {
             targetPosition = startPosition + new Vector3(5.0f, 0.0f, 0.0f);
             yield return MoveToTargetPosition(targetPosition);
-            transform.LookAt(targetPosition);
+            // RotateRight(targetPosition);
 
             targetPosition = startPosition + new Vector3(5.0f, -4.0f, 0.0f);
             yield return MoveToTargetPosition(targetPosition);
-            transform.LookAt(targetPosition);
+            // RotateDown(-targetPosition);
 
             targetPosition = startPosition + new Vector3(0.0f, -4.0f, 0.0f);
             yield return MoveToTargetPosition(targetPosition);
-            transform.LookAt(targetPosition);
+            // RotateLeft(targetPosition);
 
             targetPosition = startPosition;
             yield return MoveToTargetPosition(targetPosition);
-            transform.LookAt(targetPosition);
+            // RotateUp(-targetPosition);
         }
     }
 
@@ -54,4 +56,29 @@ public class TweenPacStudent : MonoBehaviour
         transform.position = target; 
 
     }
+    void RotateDown(Vector3 targetPosition)
+{
+    float targetAngle = 180.0f;
+
+    transform.rotation = Quaternion.Euler(new Vector3(0, 0, targetAngle));
+}
+    void RotateUp(Vector3 targetPosition)
+{
+    float targetAngle = 0.0f;
+
+    transform.rotation = Quaternion.Euler(new Vector3(0, 0, targetAngle));
+}
+    void RotateRight(Vector3 targetPosition)
+{
+    float targetAngle = 90.0f;
+
+    transform.rotation = Quaternion.Euler(new Vector3(0, 0, targetAngle));
+}
+    void RotateLeft(Vector3 targetPosition)
+{
+    float targetAngle = 270.0f;
+
+    transform.rotation = Quaternion.Euler(new Vector3(0, 0, targetAngle));
+}
+
 }
