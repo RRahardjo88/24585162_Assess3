@@ -9055,6 +9055,7 @@ GameObject:
   - component: {fileID: 1309588889}
   - component: {fileID: 1309588891}
   - component: {fileID: 1309588892}
+  - component: {fileID: 1309588893}
   m_Layer: 6
   m_Name: Pacstudent
   m_TagString: Untagged
@@ -9325,7 +9326,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309588877}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd8f2961a5c5a4171904d03b10b71d59, type: 3}
   m_Name: 
@@ -9342,12 +9343,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09e39b9b18a8aee48a35346c4b2183e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kecepatan: 8
+  speed: 8
   speedMultiplier: 1
   initialDirection: {x: 0, y: 0}
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
+--- !u!114 &1309588893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309588877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9acd4836baf0f914798e7edb4fb1f5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1529074063
 GameObject:
   m_ObjectHideFlags: 0
@@ -10650,7 +10663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09e39b9b18a8aee48a35346c4b2183e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kecepatan: 5
+  speed: 4
   speedMultiplier: 1
   initialDirection: {x: 0, y: 1}
   obstacleLayer:
@@ -11152,7 +11165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09e39b9b18a8aee48a35346c4b2183e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kecepatan: 4
+  speed: 4
   speedMultiplier: 1
   initialDirection: {x: 0, y: 1}
   obstacleLayer:
@@ -11874,7 +11887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09e39b9b18a8aee48a35346c4b2183e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kecepatan: 4
+  speed: 4
   speedMultiplier: 1
   initialDirection: {x: 0, y: 1}
   obstacleLayer:
@@ -12294,7 +12307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09e39b9b18a8aee48a35346c4b2183e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kecepatan: 4
+  speed: 4
   speedMultiplier: 1
   initialDirection: {x: 0, y: -1}
   obstacleLayer:
